@@ -7,20 +7,8 @@
             "authorId": "3"
         },
         {
-            "id": "4",
-            "name": "Sex and the City 2",
-            "genre": "Comedy",
-            "authorId": "3"
-        },
-        {
             "id": "2",
             "name": "JS for dummies",
-            "genre": "CS",
-            "authorId": "2"
-        },
-        {
-            "id": "5",
-            "name": "PHP for dummies",
             "genre": "CS",
             "authorId": "2"
         },
@@ -29,6 +17,18 @@
             "name": "Interstellar",
             "genre": "Sci-Fi",
             "authorId": "1"
+        },
+        {
+            "id": "4",
+            "name": "Sex and the City 2",
+            "genre": "Comedy",
+            "authorId": "3"
+        },
+        {
+            "id": "5",
+            "name": "PHP for dummies",
+            "genre": "CS",
+            "authorId": "2"
         },
         {
             "id": "6",
@@ -41,17 +41,20 @@
         {
             "id": "1",
             "name": "Christopher Nolan",
-            "age": "46"
+            "age": "46",
+            "sex": "male"
         },
         {
             "id": "2",
             "name": "Henrique Peterson",
-            "age": "54"
+            "age": "54",
+            "sex": "male"
         },
         {
             "id": "3",
             "name": "Travis Old",
-            "age": "38"
+            "age": "38",
+            "sex": "male"
         }
     ]
 }
