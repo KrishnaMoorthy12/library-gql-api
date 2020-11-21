@@ -1,0 +1,57 @@
+{
+    "books": [
+        {
+            "id": "1",
+            "name": "Sex and the City",
+            "genre": "Comedy",
+            "authorId": "3"
+        },
+        {
+            "id": "4",
+            "name": "Sex and the City 2",
+            "genre": "Comedy",
+            "authorId": "3"
+        },
+        {
+            "id": "2",
+            "name": "JS for dummies",
+            "genre": "CS",
+            "authorId": "2"
+        },
+        {
+            "id": "5",
+            "name": "PHP for dummies",
+            "genre": "CS",
+            "authorId": "2"
+        },
+        {
+            "id": "3",
+            "name": "Interstellar",
+            "genre": "Sci-Fi",
+            "authorId": "1"
+        },
+        {
+            "id": "6",
+            "name": "Tenet",
+            "genre": "Sci-Fi",
+            "authorId": "1"
+        }
+    ],
+    "authors": [
+        {
+            "id": "1",
+            "name": "Christopher Nolan",
+            "age": "46"
+        },
+        {
+            "id": "2",
+            "name": "Henrique Peterson",
+            "age": "54"
+        },
+        {
+            "id": "3",
+            "name": "Travis Old",
+            "age": "38"
+        }
+    ]
+}
