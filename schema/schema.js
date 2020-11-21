@@ -1,4 +1,12 @@
-import { GraphQLID, GraphQLInt, GraphQLList, GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
+import {
+  GraphQLID,
+  GraphQLInputObjectType,
+  GraphQLInt,
+  GraphQLList,
+  GraphQLObjectType,
+  GraphQLSchema,
+  GraphQLString
+} from 'graphql';
 import db from '../DBConnManager';
 
 const BookType = new GraphQLObjectType({
@@ -80,5 +88,39 @@ const RootQuery = new GraphQLObjectType({
   })
 });
 
-const Schema = new GraphQLSchema({ query: RootQuery });
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addAuthor: {
+      type: AuthorType,
+      args: {
+        name: { type: GraphQLString },
+        age: { type: GraphQLInt },
+        sex: { type: GraphQLString }
+      },
+      resolve: (parent, args) => {
+        const count = db.count('/authors');
+        const newAuthor = { ...args, id: (count + 1).toString() };
+        db.push('/authors', [newAuthor], false);
+        return newAuthor;
+      }
+    },
+    addBook: {
+      type: BookType,
+      args: {
+        name: { type: GraphQLString },
+        genre: { type: GraphQLID },
+        authorId: { type: GraphQLID }
+      },
+      resolve: (parent, args) => {
+        const count = db.count('/books');
+        const newBook = { ...args, id: (count + 1).toString() };
+        db.push('/books', [newBook], false);
+        return newBook;
+      }
+    }
+  }
+});
+
+const Schema = new GraphQLSchema({ query: RootQuery, mutation: Mutation });
 export { Schema };

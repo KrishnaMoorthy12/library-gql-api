@@ -35,6 +35,12 @@
             "name": "Tenet",
             "genre": "Sci-Fi",
             "authorId": "1"
+        },
+        {
+            "name": "OOAD for pas",
+            "genre": "CS",
+            "authorId": "4",
+            "id": "7"
         }
     ],
     "authors": [
@@ -55,6 +61,12 @@
             "name": "Travis Old",
             "age": "38",
             "sex": "male"
+        },
+        {
+            "name": "Indumathi",
+            "age": 20,
+            "sex": "female",
+            "id": "4"
         }
     ]
 }
