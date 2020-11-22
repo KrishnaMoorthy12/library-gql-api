@@ -53,19 +53,19 @@
         {
             "id": "9b1deb4d-3b7d-4b1d-9bdd-2b0d7b3dcb6d",
             "name": "Christopher Nolan",
-            "age": "46",
+            "age": 46,
             "sex": "male"
         },
         {
             "id": "9b1deb4d-3b7d-4b2d-9bdd-2b0d7b3dcb6d",
             "name": "Henrique Peterson",
-            "age": "54",
+            "age": 54,
             "sex": "male"
         },
         {
             "id": "9b1deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
             "name": "Travis Old",
-            "age": "38",
+            "age": 38,
             "sex": "male"
         },
         {

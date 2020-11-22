@@ -1,4 +1,4 @@
-import { GraphQLID, GraphQLInt, GraphQLObjectType, GraphQLString } from 'graphql';
+import { GraphQLID, GraphQLInt, GraphQLNonNull, GraphQLObjectType, GraphQLString } from 'graphql';
 import { v4 as uuidv4 } from 'uuid';
 
 import { AuthorType, BookType } from '../types';
@@ -10,9 +10,9 @@ const Mutation = new GraphQLObjectType({
     addAuthor: {
       type: AuthorType,
       args: {
-        name: { type: GraphQLString },
-        age: { type: GraphQLInt },
-        sex: { type: GraphQLString }
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        age: { type: new GraphQLNonNull(GraphQLInt) },
+        sex: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve: (_parent, args) => {
         const newAuthor = { ...args, id: uuidv4() };
@@ -23,9 +23,9 @@ const Mutation = new GraphQLObjectType({
     addBook: {
       type: BookType,
       args: {
-        name: { type: GraphQLString },
-        genre: { type: GraphQLID },
-        authorId: { type: GraphQLID }
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        genre: { type: new GraphQLNonNull(GraphQLID) },
+        authorId: { type: new GraphQLNonNull(GraphQLID) }
       },
       resolve: (_parent, args) => {
         const newBook = { ...args, id: uuidv4() };
