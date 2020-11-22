@@ -9,6 +9,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "indent": ["warn", "tab"],
     "linebreak-style": ["warn", "unix"],
     "quotes": ["warn", "single"],
