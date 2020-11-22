@@ -1,4 +1,5 @@
 import { GraphQLID, GraphQLInt, GraphQLObjectType, GraphQLString } from 'graphql';
+import { v4 as uuidv4 } from 'uuid';
 
 import { AuthorType, BookType } from '../types';
 import db from '../../DBConnManager';
@@ -14,8 +15,7 @@ const Mutation = new GraphQLObjectType({
         sex: { type: GraphQLString }
       },
       resolve: (_parent, args) => {
-        const count = db.count('/authors');
-        const newAuthor = { ...args, id: (count + 1).toString() };
+        const newAuthor = { ...args, id: uuidv4() };
         db.push('/authors', [newAuthor], false);
         return newAuthor;
       }
@@ -28,8 +28,7 @@ const Mutation = new GraphQLObjectType({
         authorId: { type: GraphQLID }
       },
       resolve: (_parent, args) => {
-        const count = db.count('/books');
-        const newBook = { ...args, id: (count + 1).toString() };
+        const newBook = { ...args, id: uuidv4() };
         db.push('/books', [newBook], false);
         return newBook;
       }
