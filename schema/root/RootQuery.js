@@ -1,7 +1,7 @@
 import { GraphQLID, GraphQLList, GraphQLObjectType } from 'graphql';
 
-import { AuthorType, BookType } from './types';
-import db from '../DBConnManager';
+import { AuthorType, BookType } from '../types';
+import db from '../../DBConnManager';
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',

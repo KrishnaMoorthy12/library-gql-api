@@ -1,7 +1,7 @@
 import { GraphQLID, GraphQLInt, GraphQLObjectType, GraphQLString } from 'graphql';
 
-import { AuthorType, BookType } from './types';
-import db from '../DBConnManager';
+import { AuthorType, BookType } from '../types';
+import db from '../../DBConnManager';
 
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
