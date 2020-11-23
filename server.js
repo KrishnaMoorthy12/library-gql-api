@@ -10,7 +10,7 @@ const server = express();
 server.use(cors());
 server.use(morgan('dev'));
 
-server.use('/api', GraphQLHandler({ schema: Schema, graphiql: false }));
+server.use('/api', GraphQLHandler({ schema: Schema, graphiql: true }));
 
 server.listen(5000, () => {
   console.log('Server started');

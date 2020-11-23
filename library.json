@@ -47,6 +47,30 @@
             "genre": "Programing",
             "authorId": "5b5deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
             "id": "9b1deb4d-3b7d-6bad-9bdd-2b0d7b3dcb6d"
+        },
+        {
+            "name": "The weird CSS",
+            "genre": "Programming",
+            "authorId": "9b1deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
+            "id": "65ae0fba-b1db-4d12-80f0-fbb439fc969b"
+        },
+        {
+            "name": "Software Testing for PAs",
+            "genre": "Testing",
+            "authorId": "4b1deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
+            "id": "59475875-c148-47e5-b475-2e0348bfcff6"
+        },
+        {
+            "name": "Dark Knight",
+            "genre": "Thriller",
+            "authorId": "9b1deb4d-3b7d-4b1d-9bdd-2b0d7b3dcb6d",
+            "id": "80c5b486-06c3-49fd-a9b5-acdc0ba37122"
+        },
+        {
+            "name": "Design Patterns",
+            "genre": "Programming",
+            "authorId": "5b5deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
+            "id": "e2f0011b-d629-4ba0-9a15-b9ae37e5fc2a"
         }
     ],
     "authors": [
