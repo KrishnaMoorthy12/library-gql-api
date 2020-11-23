@@ -78,30 +78,30 @@
             "id": "9b1deb4d-3b7d-4b1d-9bdd-2b0d7b3dcb6d",
             "name": "Christopher Nolan",
             "age": 46,
-            "sex": "male"
+            "sex": "Male"
         },
         {
             "id": "9b1deb4d-3b7d-4b2d-9bdd-2b0d7b3dcb6d",
             "name": "Henrique Peterson",
             "age": 54,
-            "sex": "male"
+            "sex": "Male"
         },
         {
             "id": "9b1deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
             "name": "Travis Old",
             "age": 38,
-            "sex": "male"
+            "sex": "Male"
         },
         {
             "name": "Indumathi",
-            "age": 20,
-            "sex": "female",
+            "age": 62,
+            "sex": "Female",
             "id": "4b1deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d"
         },
         {
             "name": "Ali Bahrami",
             "age": 46,
-            "sex": "male",
+            "sex": "Male",
             "id": "5b5deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d"
         }
     ]
