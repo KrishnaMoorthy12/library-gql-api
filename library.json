@@ -9,13 +9,13 @@
         {
             "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcc8d",
             "name": "JS for dummies",
-            "genre": "CS",
+            "genre": "Programing",
             "authorId": "9b1deb4d-3b7d-4b2d-9bdd-2b0d7b3dcb6d"
         },
         {
             "id": "9b1deb4d-3b7d-4bad-9bdd-2b1b7b3dcb6d",
             "name": "Irene Iddesleigh",
-            "genre": "Sci-Fi",
+            "genre": "Fantasy",
             "authorId": "9b1deb4d-3b7d-4b1d-9bdd-2b0d7b3dcb6d"
         },
         {
@@ -27,24 +27,24 @@
         {
             "id": "9b1deb4d-3b7d-4bad-1cdd-2b0d7b3dcb6d",
             "name": "PHP for dummies",
-            "genre": "CS",
+            "genre": "Programing",
             "authorId": "9b1deb4d-3b7d-4b2d-9bdd-2b0d7b3dcb6d"
         },
         {
             "id": "9b1abb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
             "name": "ABCD",
-            "genre": "Sci-Fi",
+            "genre": "Romance",
             "authorId": "9b1deb4d-3b7d-4b1d-9bdd-2b0d7b3dcb6d"
         },
         {
             "name": "OOAD for pas",
-            "genre": "CS",
+            "genre": "Programing",
             "authorId": "4b1deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
             "id": "9b1deb2e-3b7d-4bad-9bdd-2b0d7b3dcb6d"
         },
         {
             "name": "Gibberish",
-            "genre": "CS",
+            "genre": "Programing",
             "authorId": "5b5deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
             "id": "9b1deb4d-3b7d-6bad-9bdd-2b0d7b3dcb6d"
         }
