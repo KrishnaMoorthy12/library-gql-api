@@ -71,6 +71,12 @@
             "genre": "Programming",
             "authorId": "5b5deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d",
             "id": "e2f0011b-d629-4ba0-9a15-b9ae37e5fc2a"
+        },
+        {
+            "name": "Sample Book",
+            "genre": "Sample",
+            "authorId": "f68828e4-218d-4117-9232-858cce73da8a",
+            "id": "a02a5a00-1319-46f5-90a5-55b2c2daf377"
         }
     ],
     "authors": [
@@ -103,6 +109,12 @@
             "age": 46,
             "sex": "Male",
             "id": "5b5deb4d-3b7d-4b2d-9bee-2b0d7b3dcb6d"
+        },
+        {
+            "name": "Remo Lawrence",
+            "age": 42,
+            "sex": "Male",
+            "id": "f68828e4-218d-4117-9232-858cce73da8a"
         }
     ]
 }
