@@ -1,6 +1,7 @@
-import { JsonDB } from 'node-json-db';
-import { Config } from 'node-json-db/dist/lib/JsonDBConfig';
+import faunadb from 'faunadb';
+import 'dotenv/config';
 
-const db = new JsonDB(new Config('library', true, true, '/'));
+const db = new faunadb.Client({ secret: process.env.SECRET });
+export const FQL = faunadb.query;
 
 export default db;

@@ -1,7 +1,7 @@
 import { GraphQLID, GraphQLObjectType, GraphQLString } from 'graphql';
 
 import AuthorType from './Author';
-import db from '../../DBConnManager';
+import db, { FQL } from '../../DBConnManager';
 
 const BookType = new GraphQLObjectType({
   name: 'Book',
@@ -11,12 +11,9 @@ const BookType = new GraphQLObjectType({
     genre: { type: GraphQLString },
     author: {
       type: AuthorType,
-      resolve: book => {
-        return db.find('/authors', author => {
-          if (book.authorId === author.id) {
-            return author;
-          }
-        });
+      resolve: async book => {
+        const result = await db.query(FQL.Get(FQL.Match(FQL.Index('author_by_id'), book.authorId)));
+        return result.data;
       }
     }
   })

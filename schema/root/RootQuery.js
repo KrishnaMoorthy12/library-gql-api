@@ -1,7 +1,7 @@
 import { GraphQLID, GraphQLList, GraphQLObjectType } from 'graphql';
 
 import { AuthorType, BookType } from '../types';
-import db from '../../DBConnManager';
+import db, { FQL } from '../../DBConnManager';
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
@@ -11,12 +11,9 @@ const RootQuery = new GraphQLObjectType({
       args: {
         id: { type: GraphQLID }
       },
-      resolve: (_parent, args) => {
-        return db.find('/books', book => {
-          if (book.id === args.id) {
-            return book;
-          }
-        });
+      resolve: async (_parent, args) => {
+        const result = await db.query(FQL.Get(FQL.Match(FQL.Index('book_by_id'), args.id)));
+        return result.data;
       }
     },
     author: {
@@ -24,21 +21,30 @@ const RootQuery = new GraphQLObjectType({
       args: {
         id: { type: GraphQLID }
       },
-      resolve: (_parent, args) => {
-        return db.find('/authors', author => {
-          if (author.id === args.id) {
-            return author;
-          }
-        });
+      resolve: async (_parent, args) => {
+        const result = await db.query(FQL.Get(FQL.Match(FQL.Index('author_by_id'), args.id)));
+        return result.data;
       }
     },
     books: {
       type: new GraphQLList(BookType),
-      resolve: () => db.filter('/books', () => true)
+      resolve: async () => {
+        const booksRef = await db.query(FQL.Paginate(FQL.Match(FQL.Index('allBooks'))));
+        return booksRef.data.map(async bookRef => {
+          const book = await db.query(FQL.Get(bookRef));
+          return book.data;
+        });
+      }
     },
     authors: {
       type: new GraphQLList(BookType),
-      resolve: () => db.filter('/authors', () => true)
+      resolve: async () => {
+        const authorsRef = await db.query(FQL.Paginate(FQL.Match(FQL.Index('allAuthors'))));
+        return authorsRef.data.map(async authorRef => {
+          const author = await db.query(FQL.Get(authorRef));
+          return author.data;
+        });
+      }
     }
   })
 });
